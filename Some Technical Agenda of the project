@@ -1,0 +1,37 @@
+- DAL folder (Contains requests to DB and any logic related to DB):
+-- XXX.Data
+-- XXX.Data.Tests
+- Domain folder (On this level is not allowed to have any kind of requests to DB, only DAL level must contain DB requests; domain level contains business logic):
+-- XXX.Domain
+-- XXX.DomainTests
+- Web API Controller (must be as much as possible spitted to simplest request methods SOLID principles)
+- Web (Angular/Angular 2) – front-end
+- Common (here we are going to store all help models)
+- Infrastructure (here will be all related features to Azure)
+- Integration folder (optional)
+
+Technologies: 
+Application must be built according SOLID Principles
+DB: MSSQL vs NoSQL
+Back-end: NLog, Unity, Web API 2, CQRS, NUnit, NSubstitute, Microsoft Azure
+Front-end: Angular/Angular 2, Bootstrap X
+
+What folders should each Class Lib consist of:
+---------------DAL Class Lib---------------------------
+Contracts – contains interface of each class 
+DataContext – contains classes related to DB
+Extensions  - contains extensions methods and classes
+Helpers = contains helper methods
+Model – contains models and enums
+Repositories - contains classes which implements interfaces from “contracts”
+
+
+
+---------------Domain Class Lib---------------------------
+Contracts – contains interface of each class 
+Extensions  - contains extensions methods and classes
+Helpers = contains helper methods
+Model – contains models and enums
+Services - contains classes which implements interfaces from “contracts”
+---------------------------------------------------------------
+
